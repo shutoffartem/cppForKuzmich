@@ -13,6 +13,6 @@ int main()
 	}
 	else
 	{
-		cout << "Incorrect value" << endl;
+		cout << "Invalid value" << endl;
 	}	
 }
