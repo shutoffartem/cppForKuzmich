@@ -9,17 +9,26 @@ int main()
 	cin >> lenght;
 	cout << "Enter snake's width" << endl;
        	cin >> width;
+	
+	cout << endl;
 
 	while (num < lenght)
 	{
 		for (int i = 0; i < width - 1; i++)
 		{
-			cout << ++num << ' ';
+			if (num < 10)
+			{
+				cout << ++num << "  ";
+			}
+			else
+			{
+				cout << ++num << ' ';
+			}	
 		}
 
 		cout << ++num << endl;
 
-		for (int i = 0; i < width*2 - 1; i++)
+		for (int i = 0; i < width*2 + width / 2; i++)
 		{
 			cout << ' ';
 		}
@@ -28,8 +37,14 @@ int main()
 
 		for (int i = 0; i < width; i++)
 		{
-			cout << num-- + width << ' ';
-                 
+			if (num + width - 1 < 9)
+			{
+                                cout << num-- + width << "  ";
+			}
+			else
+			{
+				cout << num-- + width << ' ';
+			}
 		}
 		num += width * 2;
 		cout << endl << ++num << endl;
